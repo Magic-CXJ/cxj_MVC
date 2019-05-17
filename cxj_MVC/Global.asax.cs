@@ -12,6 +12,7 @@ namespace cxj_MVC
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new cxj_MVC.Models.MyDbInit());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
